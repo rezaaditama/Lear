@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!--Form Tugas Pertama-->
+    <form>
+      <label for="username">Username :</label>
+      <input type="text" id="username" />
+      <br />
+      <label for="password">Password :</label>
+      <input type="password" id="password" />
+      <br />
+      <label for="jenisKelamin">Jenis kelamin :</label>
+      <input type="radio" id="pria" name="jenisKelamin" />
+      <label for="pria">Pria</label>
+      <input type="radio" id="wanita" name="jenisKelamin" />
+      <label for="wanita">Wanita</label>
+      <br />
+      <label for="hobi">Hobi</label>
+      <input type="checkbox" id="berenang" />
+      <label for="berenang">Berenang</label>
+      <input type="checkbox" id="bernyanyi" />
+      <label for="bernyanyi">Bernyanyi</label>
+      <input type="checkbox" id="belajar" />
+      <label for="belajar">Belajar</label>
+      <br />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+    <br />
+
+    <!--Form Tugas Kedua-->
+    <form>
+      <table cellspacing="0" border="1" cellpadding="5">
+        <tr>
+          <td>
+            <label for="username"><p>Username :</p></label>
+          </td>
+          <td><input type="text" id="username" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password"><p>Password :</p></label>
+          </td>
+          <td><input type="password" id="password" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="radio" id="pria" name="jenisKelamin" /><label
+              for="pria"
+              >Laki-laki</label
+            >
+            <input type="radio" id="wanita" name="jenisKelamin" />
+            <label for="wanita">wanita</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" id="SMA" /> <label for="SMA">SMA</label>
+            <input type="checkbox" id="SMP" /> <label for="SMP">SMP</label>
+            <input type="checkbox" id="SD" /> <label for="SD">SD</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="alamat"><p>Alamat :</p></label>
+          </td>
+          <td>
+            <select name="alamat" id="alamat">
+              <option value="jawaBarat">Jawa Barat</option>
+              <option value="jawaTengah">Jawa Tengah</option>
+              <option value="jawaTimur">Jawa Timur</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="comment"><p>Comment :</p></label>
+          </td>
+          <td>
+            <textarea name="comment" id="comment"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><button type="submit">Submit</button></td>
+          <td><button type="reset">Reset</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
