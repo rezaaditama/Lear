@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Store</title>
+    <style>
+      a {
+        color: inherit;
+      }
+
+      .dark-mode {
+        background-color: darkslateblue;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <a href="" onclick="ganti()">Ganti nama</a>
+    <a href="" onclick="hapus()">Hapus Nama</a>
+    <a href="" class="toggle">Dark Mode</a>
+    <a href="" onclick="reset()">Hapus Semua</a>
+  </body>
+  <script>
+    let judul = document.querySelector('h1');
+
+    let nama = localStorage.getItem('nama');
+
+    if (!nama) {
+      nama = prompt('masukkan nama anda');
+      localStorage.setItem('nama', nama);
+    }
+
+    const ganti = () => {
+      nama = prompt('Masukkan nama baru');
+      localStorage.setItem('nama', nama);
+    };
+
+    const hapus = () => {
+      localStorage.removeItem('nama');
+    };
+
+    let tema = localStorage.getItem('tema');
+
+    if (!tema) {
+      localStorage.setItem('tema', 'light');
+    }
+
+    const toggle = document.querySelector('.toggle');
+
+    toggle.addEventListener('click', function (e) {
+      tema = localStorage.getItem('tema');
+
+      if (tema === 'light') {
+        dark();
+      } else {
+        light();
+      }
+
+      e.preventDefault();
+    });
+
+    const dark = () => {
+      document.body.classList.add('dark-mode');
+      toggle.innerHTML = 'Light Mode';
+      tema = localStorage.setItem('tema', 'dark');
+    };
+
+    const light = () => {
+      document.body.classList.remove('dark-mode');
+      tema = localStorage.setItem('tema', 'light');
+      toggle.innerHTML = 'Dark Mode';
+    };
+
+    const reset = () => {
+      localStorage.clear();
+    };
+
+    judul.innerHTML = `hello ${nama}`;
+  </script>
+</html>
